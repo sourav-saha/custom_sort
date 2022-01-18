@@ -1,0 +1,64 @@
+Writing custom comparator of data type person (id, continentId)
+
+cmp(person p1, person p2)
+   if p1.continentId == p2.continentId
+      if p1.continentId is even
+         return p1.id - p2.id;  // or p1.id < p2.id;
+      else
+         return p2.id - p1.id;  // or p2.id < p1.id;
+   else
+      return p1.continentId - p2.continentId;  // or p1.continentId < p2.continentId
+  
+  
+  problem:
+  
+  Given an array of N people containing the id of the person and the continent ID he or she belongs to.
+Task:
+
+Order them in such a way that all the people belonging to the same continent come together.
+Order the people of the same continent in a non-decreasing order if the Continent ID is even else order them in non-increasing order.
+Continents must be ordered in the non-decreasing order
+Input Format
+
+First line contains the no. of test cases
+Each test case starts with a new line containing N, no. of people.
+Next N lines contain personID, continentID.
+There is a new line after each test case.
+
+Constraints
+
+
+Output Format
+
+For each test case,
+Print the personID, continentID of all the people in the order mentioned.
+
+Sample Input 0
+
+2
+6
+1 2
+2 2
+1 4
+2 4
+1 3
+2 3
+5
+1 4
+2 4
+1 3
+2 3
+3 3
+Sample Output 0
+
+1 2
+2 2
+2 3
+1 3
+1 4
+2 4
+3 3
+2 3
+1 3
+1 4
+2 4
